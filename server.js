@@ -27,7 +27,7 @@ app.use('/api/products',productRouter)
 app.use('/api/orders',orderRouter)
 
 //Serve static assests if in production
-
+/* 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(express.static(path.join(__dirname, 'build')))
@@ -43,7 +43,7 @@ if(process.env.NODE_ENV==='production'){
     res.send('API is running....');
   });
 }
-
+*/
 
 app.use((err,req,res,next)=>{
     res.status(500).send({message:err.message})
